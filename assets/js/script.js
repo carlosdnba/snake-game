@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         randomApple();
         direction = 1;
         scoreDisplay.innerText = score;
-        intervalTime = 300;
+        intervalTime = 280;
         currentSnake = [2, 1, 0];
         currentIndex = 0;
         currentSnake.forEach(index => squares[index].classList.add('snake'));
@@ -63,7 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
             score++;
             scoreDisplay.textContent = score;
             clearInterval(interval);
-            intervalTime = intervalTime * speed;
+            if (score < 14) {
+                intervalTime = intervalTime * speed;
+            }
             interval = setInterval(moveOutComes, intervalTime);
         }        
         squares[currentSnake[0]].classList.add('snake');
