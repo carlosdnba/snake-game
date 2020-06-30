@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const squares = document.querySelectorAll('.grid div');
     const scoreDisplay = document.querySelector('span');
     const startBtn = document.querySelector('.start');
+    const upBtn = document.getElementById('up');
+    const downBtn = document.getElementById('down');
+    const leftBtn = document.getElementById('left');
+    const rightBtn = document.getElementById('right');
 
     const width = 10;
     let currentIndex = 0; // first div in our grid
@@ -86,6 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
             direction = + width; // press down -> snake head will instantly appear in the div ten divs from where you are now
         }
     }
+
+    upBtn.addEventListener('click', function() {
+        direction = - width;
+    });
+    downBtn.addEventListener('click', function() {
+        direction = + width;
+    });
+    rightBtn.addEventListener('click', function() {
+        direction = 1;
+    });
+    leftBtn.addEventListener('click', function() {
+        direction = -1;
+    });
 
     document.addEventListener('keyup', control);
     startBtn.addEventListener('click', startGame);
