@@ -70,10 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // generate new apple once apple is eaten
+    let oldApple = 0;
     function randomApple() {
+        
         do {
             appleIndex = Math.floor(Math.random() * 99);
         } while (squares[appleIndex].classList.contains('snake'));
+
+        if (appleIndex < 3 || appleIndex > 99 || appleIndex === oldApple) {
+            randomApple();
+        }
+
+        oldApple = appleIndex;
         squares[appleIndex].classList.add('apple');
     }
 
