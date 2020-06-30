@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const leftBtn = document.getElementById('left');
     const rightBtn = document.getElementById('right');
 
-    const width = 10;
+    const width = 20;
     let currentIndex = 0; // first div in our grid
     let appleIndex = 0; // first div in our grid
     let currentSnake = [2, 1, 0]; // so the div in our grid 2 being (the head), and 0 being the end (tail), and the rest the body
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         randomApple();
         direction = 1;
         scoreDisplay.innerText = score;
-        intervalTime = 500;
+        intervalTime = 300;
         currentSnake = [2, 1, 0];
         currentIndex = 0;
         currentSnake.forEach(index => squares[index].classList.add('snake'));
@@ -71,18 +71,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // generate new apple once apple is eaten
     let oldApple = 0;
+    let gridSize = 399;
     function randomApple() {
         
         do {
-            appleIndex = Math.floor(Math.random() * 99);
+            appleIndex = Math.floor(Math.random() * gridSize);
         } while (squares[appleIndex].classList.contains('snake'));
 
-        if (appleIndex < 3 || appleIndex > 99 || appleIndex === oldApple) {
+        if (appleIndex < 3 || appleIndex > 399 || appleIndex === oldApple) {
             randomApple();
         }
 
         oldApple = appleIndex;
         squares[appleIndex].classList.add('apple');
+
     }
 
     // functions to keycodes
@@ -114,5 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('keyup', control);
-    startBtn.addEventListener('click', startGame);
+    startBtn.addEventListener('click', startGame);    
+
 });

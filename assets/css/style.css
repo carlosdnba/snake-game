@@ -26,8 +26,8 @@ button {
 }
 
 .grid {
-  width: 340px;
-  height: 340px;
+  width: 360px;
+  height: 360px;
   display: flex;
   flex-wrap: wrap;
   border-color: #e0daca;
@@ -37,8 +37,8 @@ button {
 }
 
 .grid div {
-  width: 34px;
-  height: 34px;
+  width: 18px;
+  height: 18px;
 }
 
 .snake {
@@ -67,4 +67,9 @@ button {
 
 #up, #down {
 align-self: center;
+}
+
+.newGrid {
+  height: 24px;
+  width: 24px;
 }
