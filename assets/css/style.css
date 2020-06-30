@@ -1,11 +1,14 @@
 body {
   margin: 10px;
-  background-color: darkslategrey;
+  background-color: #293b3b;
 }
 
 button {
   width: 150px;
-  margin: 5px;
+  height: 36;
+  margin: 7px;
+  border-radius: 10px;
+  background-color: #969284;
 }
 
 .container {
@@ -16,6 +19,7 @@ button {
 }
 
 .score {
+  color: #e0daca;
   margin-top: 15px;
   margin-bottom: 15px;
   align-self: center;
@@ -26,8 +30,10 @@ button {
   height: 340px;
   display: flex;
   flex-wrap: wrap;
+  border-color: #e0daca;
   border-style: solid;
   align-self: center;
+  margin-bottom: 5px;
 }
 
 .grid div {
@@ -45,6 +51,7 @@ button {
 
 .start {
   align-self: center;
+  border-radius: 6px;
 }
 
 .buttons {

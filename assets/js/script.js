@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = 0;
         currentSnake.forEach(index => squares[index].classList.add('snake'));
         interval = setInterval(moveOutComes, intervalTime);
+        document.querySelector('.grid').style.borderColor = '#e0daca';
     }
 
     // function that deals with all the ove outcomes of the snake
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             (currentSnake[0] - width < 0 && direction === -width) ||  //if snake hits the top
             squares[currentSnake[0] + direction].classList.contains('snake') //if snake goes into itself
         ) {
-            window.alert('Game over!');
+            document.querySelector('.grid').style.borderColor = '#c11b04';
             return clearInterval(interval); //this will clear the interval if any of the above happen
         }
 
