@@ -3,27 +3,61 @@ body {
   background-color: darkslategrey;
 }
 
+button {
+  width: 150px;
+  margin: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
 .score {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  align-self: center;
 }
 
 .grid {
-  width: 360px;
-  height: 360px;
+  width: 340px;
+  height: 340px;
   display: flex;
   flex-wrap: wrap;
   border-style: solid;
+  align-self: center;
 }
 
 .grid div {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
 }
+
 .snake {
   background-color: green;
 }
 
 .apple {
   background-color: red;
+}
+
+.start {
+  align-self: center;
+}
+
+.buttons {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonLR {
+  align-self: center;
+  flex-direction: row;
+}
+
+#up, #down {
+align-self: center;
 }
