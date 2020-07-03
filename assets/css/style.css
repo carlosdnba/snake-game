@@ -1,14 +1,17 @@
 body {
   margin: 10px;
   background-color: #293b3b;
+  font-family: 'Bangers', cursive;
+  font-size: 25px;
 }
 
 button {
-  width: 150px;
-  height: 36;
+  width: 90px;
+  height: 32px;
   margin: 7px;
   border-radius: 10px;
   background-color: #969284;
+  font-size: 18px;
 }
 
 .container {
@@ -20,25 +23,27 @@ button {
 
 .score {
   color: #e0daca;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 12px;
   align-self: center;
 }
 
 .grid {
-  width: 360px;
-  height: 360px;
+  width: 340px;
+  height: 340px;
   display: flex;
   flex-wrap: wrap;
   border-color: #e0daca;
   border-style: solid;
   align-self: center;
   margin-bottom: 5px;
+  border-radius: 5px;
+
 }
 
 .grid div {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
 }
 
 .snake {
@@ -52,6 +57,7 @@ button {
 .start {
   align-self: center;
   border-radius: 6px;
+  margin-top: 5px;
 }
 
 .buttons {
@@ -66,10 +72,9 @@ button {
 }
 
 #up, #down {
-align-self: center;
+  align-self: center;
 }
 
-.newGrid {
-  height: 24px;
-  width: 24px;
+#down {
+  margin-bottom: 0px;
 }
