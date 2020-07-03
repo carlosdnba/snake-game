@@ -1,6 +1,6 @@
 body {
   margin: 10px;
-  background-color: #293b3b;
+  background-color: #002130;
   font-family: 'Bangers', cursive;
   font-size: 25px;
 }
@@ -9,9 +9,15 @@ button {
   width: 90px;
   height: 32px;
   margin: 7px;
-  border-radius: 10px;
-  background-color: #969284;
+  border-radius: 16px;
+  background-color: #002130;
+  border-color: #e0daca;
+  color: #e0daca;
   font-size: 18px;
+}
+
+button:hover {
+  background-color: #2c6c7a;
 }
 
 .container {
@@ -47,11 +53,12 @@ button {
 }
 
 .snake {
-  background-color: green;
+  background-color: #2c6c7a;
 }
 
 .apple {
   background-color: red;
+  border-radius: 4px;
 }
 
 .start {

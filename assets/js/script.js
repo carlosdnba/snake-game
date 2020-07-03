@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const squares = document.querySelectorAll('.grid div');
     const scoreDisplay = document.querySelector('span');
     const startBtn = document.querySelector('.start');
     const upBtn = document.getElementById('up');
     const downBtn = document.getElementById('down');
     const leftBtn = document.getElementById('left');
     const rightBtn = document.getElementById('right');
+
+    const squares = document.querySelectorAll('.grid div');
 
     const width = 20;
     let currentIndex = 0; // first div in our grid
