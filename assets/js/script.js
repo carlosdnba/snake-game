@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(interval);
         score = 0;
         randomApple();
+        // randomApple();
         direction = 1;
         scoreDisplay.innerText = score;
         intervalTime = 280;
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.grid').style.borderColor = '#e0daca';
     }
 
-    // function that deals with all the ove outcomes of the snake
+    // function that deals with all the move outcomes of the snake
     function moveOutComes() {
 
     //snake hitting border and snake hitting it self
