@@ -14,7 +14,7 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "start_url": "/",
+  "start_url": "https://carlosdnba.github.io/snake-game/",
   "display": "standalone",
   "theme_color": "#2196f3",
   "background_color": "#2196f3"
