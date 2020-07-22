@@ -85,3 +85,11 @@ button:hover {
 #down {
   margin-bottom: 0px;
 }
+
+.add-button {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  height: 80px;
+  width: 70px;
+}

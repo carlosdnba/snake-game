@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="assets/js/script.js" charset="utf-8"></script>
-    <!-- <script src="assets/js/install.js" charset="utf-8"></script> -->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Squada+One&display=swap" rel="stylesheet"> 
@@ -19,6 +18,7 @@
 </head>
 <body>
     <div class="container">
+    <button class="add-button">Add to home screen</button>
     <button class="start">Jogar!</button>
     <div class="score">Score: <span>0</span></div>
 
@@ -34,7 +34,6 @@
         </div>
         <button id="down">Baixo</button>    
     </div>
-
     </div>
 
     <script>
@@ -42,46 +41,6 @@
             document.querySelector('.grid').innerHTML = document.querySelector('.grid').innerHTML + '<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>'
     }
     </script>
-    <script>
-        var CACHE_NAME = 'static-v1';
-
-        self.addEventListener('install', function (event) {
-        event.waitUntil(
-            caches.open(CACHE_NAME).then(function (cache) {
-            return cache.addAll([
-                '/',
-                '/index.html',
-                '/assets/css/normalize.css',
-                '/assets/css/style.css',
-                '/assets/js/script.js',
-                '/assets/manifest.js'
-            ]);
-            })
-        )
-        });
-
-        self.addEventListener('activate', function activator(event) {
-        event.waitUntil(
-            caches.keys().then(function (keys) {
-            return Promise.all(keys
-                .filter(function (key) {
-                return key.indexOf(CACHE_NAME) !== 0;
-                })
-                .map(function (key) {
-                return caches.delete(key);
-                })
-            );
-            })
-        );
-        });
-
-        self.addEventListener('fetch', function (event) {
-        event.respondWith(
-            caches.match(event.request).then(function (cachedResponse) {
-            return cachedResponse || fetch(event.request);
-            })
-        );
-        });
-    </script>
+    <script src="assets/js/install.js" charset="utf-8"></script>
 </body>
 </html>
