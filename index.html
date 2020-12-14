@@ -1,46 +1,39 @@
 <html lang="en">
+
 <head>
-    <link rel="manifest" href="assets/manifest.json">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="assets/js/script.js" charset="utf-8"></script>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Squada+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Squada+One&display=swap" rel="stylesheet">
     <title>Snake Game</title>
-    <!-- CODELAB: Add iOS meta tags and icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Weather PWA">
-    <link rel="apple-touch-icon" href="assets/img/icon-128.png">
-    <meta name="description" content="The Nokia 3310 game">
-    <meta name="theme-color" content="#2196f3" />
 </head>
+
 <body>
     <div class="container">
-    <button class="add-button">Add to home screen</button>
-    <button class="start">Jogar!</button>
-    <div class="score">Score: <span>0</span></div>
+        <button class="start">Jogar!</button>
+        <div class="score">Score: <span>0</span></div>
 
-    <div class="grid">
+        <div class="grid">
 
-    </div>
-
-    <div class="buttons">
-        <button id="up">Cima</button>
-        <div class="buttonsLR">
-            <button id="left">Esquerda</button>
-            <button id="right">Direita</button>
         </div>
-        <button id="down">Baixo</button>    
-    </div>
+
+        <div class="buttons">
+            <button id="up">Cima</button>
+            <div class="buttonsLR">
+                <button id="left">Esquerda</button>
+                <button id="right">Direita</button>
+            </div>
+            <button id="down">Baixo</button>
+        </div>
     </div>
 
     <script>
         for (let i = 0; i < 20; i++) {
             document.querySelector('.grid').innerHTML = document.querySelector('.grid').innerHTML + '<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>'
-    }
+        }
     </script>
-    <script src="assets/js/install.js" charset="utf-8"></script>
 </body>
+
 </html>
